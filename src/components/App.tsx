@@ -1,9 +1,8 @@
-import *as React from 'react';
+import * as React from "react";
 
-interface AppProps {
-    message: string,
-};
+export default class App extends React.Component<any, {}> {
 
-export default function ({message}: AppProps) {
-    return <h1>Hello {message}</h1>;
+    render() {
+        return <div>hello {this.props.message}</div>
+    }
 };
