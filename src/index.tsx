@@ -1,9 +1,9 @@
 import * as React from 'react';
 import {render} from 'react-dom';
-import AddTaskForm from './components/AddTaskForm';
+import AddTaskForm from './AddTaskForm';
 import {Provider} from "react-redux";
 import {combineReducers, createStore} from "redux";
-import {tasksReducer} from "./components/task.reducers";
+import {tasksReducer} from "./task.reducers";
 
 const rootReducer = combineReducers({
     tasks: tasksReducer

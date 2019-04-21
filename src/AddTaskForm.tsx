@@ -23,7 +23,7 @@ export class AddTaskForm extends React.Component<IAddTaskFormProps, IAddTaskForm
     }
 
     render() {
-        return <div>
+        return (<div>
             <form onSubmit={this.addTask.bind(this)}>
                 <div>Task: <input className={"task"} value={this.state.task}
                                   onChange={this.handleTaskChange.bind(this)}/></div>
@@ -32,7 +32,7 @@ export class AddTaskForm extends React.Component<IAddTaskFormProps, IAddTaskForm
 
                 <button type={"submit"}>Add Task</button>
             </form>
-        </div>
+        </div>);
     }
 
     private addTask(event: any) {
