@@ -4,8 +4,13 @@ import AddTaskForm from './AddTaskForm';
 import {Provider} from "react-redux";
 import {combineReducers, createStore} from "redux";
 import {tasksReducer} from "./task.reducers";
+import {Task} from "./task";
 
-const rootReducer = combineReducers({
+export interface RootState {
+    tasks: Task[]
+}
+
+const rootReducer = combineReducers<RootState>({
     tasks: tasksReducer
 });
 
