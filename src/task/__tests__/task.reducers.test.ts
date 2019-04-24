@@ -1,6 +1,6 @@
 import {tasksReducer} from "../task.reducers";
 import {TASK_ADDED} from "../task.actions";
-import {Task} from "../task";
+import {Task} from "../domain";
 
 describe("Task reducer", () => {
 

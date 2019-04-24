@@ -1,5 +1,5 @@
 import {AddTaskAction, TASK_ADDED} from "./task.actions";
-import {Task} from "./task";
+import {Task} from "./domain";
 
 export const tasksReducer = (state: Task[] = [], action: AddTaskAction): Task[] => {
 

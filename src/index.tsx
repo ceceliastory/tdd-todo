@@ -2,8 +2,8 @@ import * as React from 'react';
 import {render} from 'react-dom';
 import {Provider} from "react-redux";
 import {combineReducers, createStore} from "redux";
-import {tasksReducer} from "./task.reducers";
-import {Task} from "./task";
+import {tasksReducer} from "./task/task.reducers";
+import {Task} from "./task/domain";
 import App from "./App";
 
 export interface RootState {

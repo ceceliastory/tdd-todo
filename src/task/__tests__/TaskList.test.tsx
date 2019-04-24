@@ -1,7 +1,7 @@
 import {shallow} from "enzyme";
 import * as React from "react";
 import {mapStateToProps, TaskList} from "../TaskList";
-import {Task} from "../task";
+import {Task} from "../domain";
 
 describe("TaskList", () => {
 

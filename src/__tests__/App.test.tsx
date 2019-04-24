@@ -1,6 +1,7 @@
 import {shallow} from "enzyme";
 import * as React from "react";
 import App from "../App";
+import AddTaskForm from "../task/AddTaskForm";
 
 describe("App component", () => {
 
@@ -11,10 +12,10 @@ describe("App component", () => {
     });
 
     test("should render the add task form", () => {
-        expect(mountedApp.find('AddTaskForm').length).toEqual(1)
+        expect(mountedApp.find('Connect(AddTaskForm)').length).toEqual(1)
     });
 
     test("should render the task list", () => {
-        expect(mountedApp.find('TaskList').length).toEqual(1)
+        expect(mountedApp.find('Connect(TaskList)').length).toEqual(1)
     })
 });

@@ -1,7 +1,7 @@
 import * as React from "react";
-import {RootState} from "./index";
-import {Task} from "./task";
+import {RootState} from "../index";
 import {connect} from "react-redux";
+import {Task} from "./domain";
 
 interface ITaskListProps {
     tasks?: Task[]
