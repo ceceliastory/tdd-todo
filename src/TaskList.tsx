@@ -4,7 +4,7 @@ import {Task} from "./task";
 import {connect} from "react-redux";
 
 interface ITaskListProps {
-    tasks: Task[]
+    tasks?: Task[]
 }
 
 export class TaskList extends React.Component<ITaskListProps, any> {
@@ -15,7 +15,7 @@ export class TaskList extends React.Component<ITaskListProps, any> {
         );
     }
 
-    private displayTasks = (): React.ReactNode => {
+    private displayTasks = () => {
         return this.props.tasks.map((task: Task, index: number) => {
             return <div className={"task"} key={`task-${index}`}>Task: {task.name} is due on {task.dueDate}</div>
         })

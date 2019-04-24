@@ -23,7 +23,7 @@ describe("TaskList mapStateToProps", () => {
     test("should map state to props", () => {
         let actual = mapStateToProps({tasks: [new Task("task 1", "04-02-19")]});
 
-        let expected = {tasks: [new Task("task 1", "04-02-19")]}
+        let expected = {tasks: [new Task("task 1", "04-02-19")]};
 
         expect(actual).toEqual(expected)
     })

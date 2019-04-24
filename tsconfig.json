@@ -1,12 +1,12 @@
 {
   "compilerOptions": {
-    "noImplicitAny": true,
     "target": "es5",
     "sourceMap": true,
     "jsx": "react",
     "allowSyntheticDefaultImports": true,
     "module": "ESNext",
-    "moduleResolution": "node"
+    "moduleResolution": "node",
+    "noImplicitAny": false
   },
   "exclude": [
     "node_modules"

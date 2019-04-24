@@ -9,7 +9,7 @@ describe("AddTaskForm Test", () => {
         let mockAddTask = jest.fn();
         let app = shallow(<AddTaskForm addTask={mockAddTask}/>);
 
-        app.find('.task').simulate('change', {target: {value: 'Take out the trash'}});
+        app.find('.task-description').simulate('change', {target: {value: 'Take out the trash'}});
         app.find('.due-date').simulate('change', {target: {value: '04-05-2019'}});
 
         app.find('form').simulate('submit', {preventDefault: jest.fn()});

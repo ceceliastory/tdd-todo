@@ -1,10 +1,10 @@
 import * as React from 'react';
 import {render} from 'react-dom';
-import AddTaskForm from './AddTaskForm';
 import {Provider} from "react-redux";
 import {combineReducers, createStore} from "redux";
 import {tasksReducer} from "./task.reducers";
 import {Task} from "./task";
+import App from "./App";
 
 export interface RootState {
     tasks: Task[]
@@ -19,7 +19,7 @@ const rootElement = document.getElementById('root');
 
 render(
     <Provider store={store}>
-        <AddTaskForm/>
+        <App/>
     </Provider>,
     rootElement
 );

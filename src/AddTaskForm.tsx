@@ -9,7 +9,7 @@ interface IAddTaskFormState {
 }
 
 interface IAddTaskFormProps {
-    addTask: (task: string, dueDate: string) => void
+    addTask?: (task: string, dueDate: string) => void
 }
 
 export class AddTaskForm extends React.Component<IAddTaskFormProps, IAddTaskFormState> {
@@ -25,7 +25,7 @@ export class AddTaskForm extends React.Component<IAddTaskFormProps, IAddTaskForm
     render() {
         return (<div>
             <form onSubmit={this.addTask.bind(this)}>
-                <div>Task: <input className={"task"} value={this.state.task}
+                <div>Task: <input className={"task-description"} value={this.state.task}
                                   onChange={this.handleTaskChange.bind(this)}/></div>
                 <div>Due date: <input className={"due-date"} value={this.state.dueDate}
                                       onChange={this.handleDueDateChange.bind(this)}/></div>
