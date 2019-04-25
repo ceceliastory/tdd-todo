@@ -3,14 +3,9 @@ import {render} from 'react-dom';
 import {Provider} from "react-redux";
 import {combineReducers, createStore} from "redux";
 import {tasksReducer} from "./task/task.reducers";
-import {Task} from "./task/domain";
 import App from "./App";
 
-export interface RootState {
-    tasks: Task[]
-}
-
-const rootReducer = combineReducers<RootState>({
+const rootReducer = combineReducers({
     tasks: tasksReducer
 });
 

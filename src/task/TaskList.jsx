@@ -1,13 +1,7 @@
 import * as React from "react";
-import {RootState} from "../index";
 import {connect} from "react-redux";
-import {Task} from "./domain";
 
-interface ITaskListProps {
-    tasks?: Task[]
-}
-
-export class TaskList extends React.Component<ITaskListProps, any> {
+export class TaskList extends React.Component {
 
     render() {
         return (
@@ -15,14 +9,14 @@ export class TaskList extends React.Component<ITaskListProps, any> {
         );
     }
 
-    private displayTasks = () => {
-        return this.props.tasks.map((task: Task, index: number) => {
+    displayTasks() {
+        return this.props.tasks.map((task, index) => {
             return <div className={"task"} key={`task-${index}`}>Task: {task.name} is due on {task.dueDate}</div>
         })
     }
 }
 
-export function mapStateToProps(state: RootState): ITaskListProps {
+export function mapStateToProps(state) {
     return {
         tasks: state.tasks
     }

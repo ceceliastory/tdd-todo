@@ -1,20 +1,10 @@
 import * as React from "react";
 import {connect} from "react-redux";
-import {Dispatch} from "redux";
 import {addTask} from "./task.actions";
 
-interface IAddTaskFormState {
-    task: string
-    dueDate: string
-}
+export class AddTaskForm extends React.Component {
 
-interface IAddTaskFormProps {
-    addTask?: (task: string, dueDate: string) => void
-}
-
-export class AddTaskForm extends React.Component<IAddTaskFormProps, IAddTaskFormState> {
-
-    constructor(props: Readonly<any>) {
+    constructor(props) {
         super(props);
         this.state = {
             task: "",
@@ -35,28 +25,28 @@ export class AddTaskForm extends React.Component<IAddTaskFormProps, IAddTaskForm
         </div>);
     }
 
-    private addTask(event: any) {
+    addTask(event) {
         event.preventDefault();
 
         this.props.addTask(this.state.task, this.state.dueDate);
-    }
+    };
 
-    private handleTaskChange(event: any) {
+    handleTaskChange(event) {
         this.setState({
             task: event.target.value
         });
-    }
+    };
 
-    private handleDueDateChange(event: any) {
+    handleDueDateChange(event) {
         this.setState({
             dueDate: event.target.value
         });
-    }
+    };
 }
 
-export function mapDispatchToProps(dispatch: Dispatch): IAddTaskFormProps {
+export function mapDispatchToProps(dispatch) {
     return {
-        addTask: (task: string, dueDate: string) => {
+        addTask: (task, dueDate) => {
             dispatch(addTask(task, dueDate));
         }
     }
