@@ -13,8 +13,4 @@ describe("App component", () => {
     test("should render the add task form", () => {
         expect(mountedApp.find('Connect(AddTaskForm)').length).toEqual(1)
     });
-
-    test("should render the task list", () => {
-        expect(mountedApp.find('Connect(TaskList)').length).toEqual(1)
-    })
 });
